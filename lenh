@@ -35,7 +35,7 @@ git branch -r
 - chay front_end evebox: cd vào thư mục webapp
 + chuyển sang nodejs phiên bản v20: nvm use
 + tải thư viện: npm i
-+ vào thư mục webapp/src , tạo file "gitrev.ts", thêm nội dung vào file : export const GIT_REV = "32dfa69";cd
++ vào thư mục webapp/src , tạo file "gitrev.ts", thêm nội dung vào file : export const GIT_REV = "32dfa69";
 + mỗi 1 lần chạy phải chuyển qua node version 20 bằng lệnh:  nvm use
 + chạy: npm start
 
@@ -44,4 +44,3 @@ git branch -r
 -run: uvicorn app:app --reload
 - http://127.0.0.1:8000/docs
 
--lam
