@@ -54,12 +54,15 @@ const AddFileRule = () => {
     const createRuleFileHanlder = async (values: any) => {
         // console.log("tên file:", values.name);
         // console.log("nội dung rule:", values.rules);
-        //================= lấy ra tên file và nối đuôi file vào=======
+        //================= lấy ra tên file và nối đuôi file vào, và lấy ra nội dung file=======
         // Nối đuôi '.rules' vào giá trị của name
         const filenameWithExtension = `${values.name}.rules`;
-        // Tạo đối tượng mới chỉ chứa thuộc tính name với đuôi .rules
-        const dataToSend = { name: filenameWithExtension };
-        //================ xong lấy ra tên file====================
+        const dataToSend = { 
+            name: filenameWithExtension, 
+            content_rule: values.rules 
+        };
+       // ở đây name chính là tên file + đuôi ".rules"
+       // content_rule : chính là nội dung rules nhập vào
         console.log(dataToSend )
         setIsLoading(true);
         try {

@@ -16,5 +16,5 @@ export const AGENT_MANAGEMENT= "/agent-management";
 export const AGENT_MANAGEMENT_DETAILS  = "/agent-management-details/:id";
 export const ALERT = "/alert";
 export const RULE_MANAGEMENT = "/rule_management";
-export const RULE_DETAILS = "/rule-details/:id";
+export const RULE_DETAILS = "/rule-details/:filename";
 export const ADD_FILE = "/add-file";

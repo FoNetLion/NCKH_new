@@ -2,7 +2,7 @@
 - file cấu hình : sudo gedit /etc/evebox/agent.yaml 
 + sửa :
   server:
-  url: http://192.168.121.191:5636   # thay vào ip của evebox server
+  url: http://192.168.189.128:5636   # thay vào ip của evebox server
 - chạy để gửi log từ eve.json client lên sqlite của server : evebox agent -c /etc/evebox/agent.yaml
 => để thuân tiện thì ở máy client đã chạy tất cả lệnh vào 1 file .sh, vào thư mục Documents/Monitor và chạy file .sh này
 ~/Documents/Monitor$ ./monitor.sh 
@@ -11,7 +11,7 @@
 + sudo systemctl start evebox
 + sudo systemctl status evebox
 + sudo systemctl enable evebox
-- xem : http://localhost:5636  hoặc  http://(ip của máy server trên 1 card mạng nào đó, vd ơ đây là card ens33)192.168.121.89:5636
+- xem : http://localhost:5636  hoặc  http://(ip của máy server trên 1 card mạng nào đó, vd ơ đây là card ens33)192.168.189.128:5636
 - Sql lite:
 + đường dẫn đến thư muc lưu trữ:
 sudo su
@@ -47,5 +47,9 @@ sudo systemctl status suricata.service
 sudo systemctl stop suricata.service
 sudo systemctl restart suricata.service
 
-- test tải file: 192.168.121.189/downloads/yourfile.txt  , bao gồm test mã hash và alert
+- test tải file: 192.168.189.128/downloads/yourfile.txt  , bao gồm test mã hash và alert
+- trong thư mục Documents của máy client có file:  suricata.rules
 
+============================ 1 số rule test
+alert icmp any any -> $HOME_NET any (msg:"co nguoi dang ping"; sid:10000001;)   : rule ping
+alert http any any -> any any (msg:"dang tai file"; sid:10000001;)               : rule tải file
