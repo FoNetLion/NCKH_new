@@ -1,0 +1,237 @@
+// Disable smooth scroll, it gets messy with keyboard shortcuts for
+// scrolling.
+$enable-smooth-scroll: false;
+
+// Tighten of the default table spacing in Bootstrap, by default its a
+// little large.
+$table-cell-padding-y: 0.25rem;
+$table-cell-padding-x: 0.25rem;
+
+// Custom dark colors by Anne-Fleur.
+$evebox-warning-color-dark: #3d5f5f;
+$evebox-info-color-dark: #50656f;
+$evebox-danger-color-dark: #72383e;
+
+@import "bootstrap/scss/bootstrap";
+@import "../../node_modules/pretty-print-json/dist/css/pretty-print-json.css";
+@import "transitions";
+
+// App specific style to force the width of an element to 1em.
+.app-w-1 {
+  width: 1em !important;
+  max-width: 1em !important;
+}
+
+.app-event-table {
+  .col-timestamp {
+    white-space: nowrap;
+    width: 1%;
+  }
+
+  .col-address {
+    white-space: nowrap;
+    width: 1%;
+  }
+
+  .col-event-type {
+    white-space: nowrap;
+    width: 1%;
+  }
+
+  .col-count {
+    white-space: nowrap;
+    width: 1%;
+  }
+
+  tbody {
+    tr {
+      cursor: pointer;
+    }
+  }
+}
+
+// Pretty-json overrides for dark theme. Not needed for light theme.
+[data-bs-theme="dark"] {
+  .json-container {
+    background-color: inherit !important;
+  }
+}
+
+[data-bs-theme="dark"] {
+  // Override the background color in table headers, as its a little
+  // too dark in the default dark theme.
+  .table {
+    th {
+      background-color: $body-tertiary-bg-dark;
+    }
+  }
+
+  // Color overrides for event tables.
+  .app-event-table {
+    tr {
+      --bs-table-border-color: black;
+    }
+
+    .table-info {
+      $_color: $evebox-info-color-dark;
+      $_hover: tint-color($_color, 10%);
+      --bs-table-bg: #{$_color} !important;
+      --bs-table-color: white !important;
+      --bs-table-hover-bg: #{$_hover} !important;
+      --bs-table-hover-color: white !important;
+    }
+
+    .table-warning {
+      $_color: $evebox-warning-color-dark;
+      $_hover: tint-color($_color, 10%);
+      --bs-table-bg: #{$_color} !important;
+      --bs-table-color: white !important;
+      --bs-table-hover-bg: #{$_hover} !important;
+      --bs-table-hover-color: white !important;
+    }
+
+    .table-success {
+      $_color: #2f4741;
+      $_hover: tint-color($_color, 10%);
+      --bs-table-bg: #{$_color} !important;
+      --bs-table-color: white !important;
+      --bs-table-hover-bg: #{$_hover} !important;
+      --bs-table-hover-color: white !important;
+    }
+
+    .table-danger {
+      $_color: $evebox-danger-color-dark;
+      $_hover: tint-color($_color, 10%);
+      --bs-table-bg: #{$_color} !important;
+      --bs-table-color: white !important;
+      --bs-table-hover-bg: #{$_hover} !important;
+      --bs-table-hover-color: white !important;
+    }
+  }
+}
+
+// Rule styling for dark mode.
+[data-bs-theme="dark"] {
+  .rule {
+    .rule-header-action {
+      font-weight: bold;
+    }
+
+    .rule-header-proto {
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .rule-header-addr {
+    }
+
+    .rule-header-port {
+    }
+
+    .rule-keyword {
+      color: dodgerblue;
+      font-weight: bold;
+    }
+
+    .rule-keyword-value {
+      color: lawngreen;
+    }
+  }
+}
+
+// Rule styling for light mode.
+[data-bs-theme="light"] {
+  .rule {
+    .rule-header-action {
+      font-weight: bold;
+    }
+
+    .rule-header-proto {
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .rule-header-addr {
+      color: dimgrey;
+    }
+
+    .rule-header-port {
+      color: slategrey;
+    }
+
+    .rule-header-direction {
+      font-weight: bold;
+    }
+
+    .rule-keyword {
+      color: blue;
+      font-weight: bold;
+    }
+
+    .rule-keyword-value {
+      color: green;
+    }
+  }
+}
+
+[data-bs-theme="dark"] {
+  .alert-info {
+    --bs-alert-bg: #{$evebox-info-color-dark};
+    --bs-alert-color: white;
+  }
+
+  .alert-warning {
+    --bs-alert-bg: #{$evebox-warning-color-dark};
+    --bs-alert-color: white;
+  }
+
+  .alert-danger {
+    --bs-alert-bg: #{$evebox-danger-color-dark};
+    --bs-alert-color: white;
+  }
+}
+
+// Make an element invisible. Useful when loading then transitioning
+// to visible.
+.invisible {
+  visibility: hidden;
+}
+
+// Force wrapping of text no matter what.
+.force-wrap {
+  word-break: break-word !important;
+  word-wrap: break-word !important;
+  overflow: hidden !important;
+  white-space: pre-wrap !important;
+}
+
+.app-detail-table {
+  td:first-child {
+    padding-left: 1em;
+  }
+
+  td:last-child {
+    padding-right: 1em;
+  }
+
+  tbody {
+    th:first-child {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+}
+
+.app-count-value-data-table {
+  tbody {
+    tr:last-child {
+      td {
+        border: none;
+      }
+    }
+  }
+}

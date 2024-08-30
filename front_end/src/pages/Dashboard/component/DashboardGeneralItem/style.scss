@@ -1,0 +1,19 @@
+.db-generalItem-wrapper {
+    width: 250px;
+    justify-content: space-between !important;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: white;
+    padding: 8px;
+    box-shadow: 2px 2px 4px rgba(128,128,128,0.4);
+    margin-bottom: 10px;
+    .db-gnIcon-wrapper{
+        width: 30px;
+        height: 30px;
+        background-color: #1a6de3;
+        color: white;
+        justify-content: center;
+        border-radius: 8px;
+    }
+}

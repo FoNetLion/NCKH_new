@@ -1,0 +1,48 @@
+.successCreateKey-modal{
+    width: 540px;
+    height: 413px;
+    .ant-modal-content {
+        background-color: #2B334C;
+        padding: 24px;
+        padding-bottom: 48px;
+    }
+    .space-successCreateKey{
+        width: 100%;
+        .ant-space-item{
+            width: 100%;
+        }
+        .close-button-modal {
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: #FFFFFF;
+        }
+    }
+    .success-title{
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+        color: #FFFFFF;
+    }
+    .celebrate-title{
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .button-comback{
+        width: 160px;
+        height: 48px;
+        background: #35DA7F;
+        border-radius: 4px;
+        border-color: #35DA7F;
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

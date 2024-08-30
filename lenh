@@ -1,0 +1,45 @@
+-copy may ao
+-Tao thu muc NCKH  voi duong dan nhu tren : home/frblam/Desktop/NCKH/
+-trong file .gitignore la cac file/thu muc khong day len git
+
+
+- Tao nhánh local: này anh zai tạo nhánh local 1 lần thôi nha
++ git checkout -b lam
++ git checkout -b manh
+
+
+- qua nhánh master và pull code về
++ git checkout master
++ git pull origin master
+
+- chuyển nhánh và code, sau đó đẩy lên nhánh. a zai checkout sang nhánh lâm rồi pull lên nhánh lâm nha
++ git checkout manh/lam
++ git pull origin master    // pull code tu master ve nhanh hien tai
++ git status
++ git add .
++ git status
++ git commit -m 'noi dung commit'
++git push origin manh/lam 
+
+- Trộn nhánh manh/lam vào master trên github
+
+- xem list nhánh
+git branch
+git branch -r
+
+- chạy front_end chinh: cd vào thư mục front-end 
++ tải thư viện: npm i
++ chạy: npm start
++ vao duong dan: http://localhost:3000/dashboard  
+
+- chay front_end evebox: cd vào thư mục webapp
++ chuyển sang nodejs phiên bản v20: nvm use
++ tải thư viện: npm i
++ vào thư mục webapp/src , tạo file "gitrev.ts", thêm nội dung vào file : export const GIT_REV = "32dfa69";cd
++ mỗi 1 lần chạy phải chuyển qua node version 20 bằng lệnh:  nvm use
++ chạy: npm start
+
+- chay : back_end 
+-cd back_end_flow
+-run: uvicorn app:app --reload
+- http://127.0.0.1:8000/docs

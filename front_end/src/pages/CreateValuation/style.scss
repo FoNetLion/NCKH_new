@@ -1,0 +1,70 @@
+.title_valuation{
+    margin-top: 0px !important;
+    font-size: 26px !important;
+}
+.breadCrumb_valuation{
+    margin: 0px !important;
+}
+.create_valuation-space{
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    .create-valuation_title-txt{
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 32px;
+    }
+}
+.ant-picker{
+    width: 100%;
+}
+.breadCrumb_valuation{
+    color:rgba(0, 0, 0, 0.6);
+}
+.create-valuation-wrapInput{
+    display: flex !important;
+    box-sizing: border-box !important;
+    flex-wrap: wrap;
+    .ant-col-8{
+        .ant-form-item{
+            margin: 0px !important;
+        }
+        .ant-form-item{
+            height: 100%;
+            .ant-input{
+                height: 46px !important;
+            }
+            .ant-picker{
+                height: 46px !important;
+            }
+            .ant-select-selector{
+                height: 46px !important;
+                .ant-select-selection-search-input{
+                    height: 100%;
+                }
+                .ant-select-selection-item{
+                    line-height: 46px;
+                }
+            }
+           
+        }
+    }
+    .organize-valuation_col{
+        margin: 10px 0;
+    }
+}
+.create-valuation_btn{
+    font-family: Helvetica;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 4px !important;
+    min-width: 110px !important;
+}
+.create-valuation_btn-submit{
+    background-color: #0048D3;
+    color: #fff;
+}
+.create-valuation_btn-cancel{
+    color: rgba(0, 0, 0, 0.6);
+}

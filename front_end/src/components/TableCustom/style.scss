@@ -1,0 +1,9 @@
+.table-custom {
+  .ant-table-pagination {
+    display: none;
+  }
+  .ant-table-cell {
+    padding: 4px 8px 4px 8px !important;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,64 @@
+.login-wrapper{
+    height: 100vh;
+    .image-background{
+        background-image: url('../../assets/images/png/leftSideImage.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 60%;
+        height: 100vh;
+        left: 0px;
+        top: 0px;
+        .main-icon-container{
+            margin-top: 40px;
+            margin-left: 40px;
+            height: 196px;
+            width: 568px;
+            display: flex;
+            justify-content: center;
+            .transition-icon-container{
+                width: 48px;
+                height: 48px;
+                background: #1C2131;
+                border-radius: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .icon-transition-login{
+                    height: 24px;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .login-container{
+        width: 45%;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #000000;
+        border-radius: 40px 0px 0px 40px;   
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .login-wrapper{
+        display: flex;
+        justify-content: center;
+        .login-container{
+            position: unset;
+            z-index: 100;
+            width: 50%;
+            border-radius: 40px;
+        }
+        .image-background{
+            width: 100%;
+            .main-icon-container{
+                display: none;
+            }
+        }
+    }
+    
+}

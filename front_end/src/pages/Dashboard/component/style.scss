@@ -1,0 +1,34 @@
+.chart-wrapper{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    .ant-space-item{
+        background-color: white;
+        width: 49%;
+        height: 100%;
+        border-radius: 8px;
+        .chart-item{
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            .ant-space-item{
+                width: 100%;
+            }
+            .chart-title{
+                width: 100%;
+                height: 10%;
+                font-size: 1rem;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+        .chart-item > .chart-content{
+            height: 82% !important;
+        }
+    }
+}
+.chart-container {
+  margin-top: 50px;
+}

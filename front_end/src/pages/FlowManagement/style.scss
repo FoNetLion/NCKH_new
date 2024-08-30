@@ -1,0 +1,56 @@
+.keys-wrapper{
+    padding: 15px;
+    width: 100%;
+    .space-keys{
+        width: 100%;
+        .table-tittle{
+            font-family: 'Helvetica Neue';
+            font-style: normal;
+            font-size: 28px;
+            line-height: 36px;
+            color: #FFFFFF;
+        }
+        .card-keys{
+            width: 100%;
+            background: #252C40;
+            border: none;
+            .form-keys{
+                background: #252C40;
+            }
+            .ant-select-selector{
+                background-color: #252C40;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+            }
+            .ant-select-selection-item, svg{
+                color: rgba(255, 255, 255, 0.7);
+            }
+            .button-plus-key{
+                background: #35DA7F;
+                border-radius: #35DA7F 4px;
+                .plus-icon-container{
+                    display: flex;
+                    align-items: center;
+                }
+                svg{
+                    color: #252C40;
+                }
+            }
+            .ant-pagination-item{
+                a{
+                    color: #FFFFFF !important;
+                }
+            }
+            .ant-pagination-item-active{
+                background-color: #35DA7F;
+                border-color: #FFFFFF;
+                border-radius: 100%;
+                a{
+                    color: #252C40 !important;
+                }
+            }
+            
+        }
+    }
+    
+}

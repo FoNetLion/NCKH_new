@@ -1,0 +1,85 @@
+.add-account-modal {
+    width: 431px !important;
+    .ant-modal-content {
+        background-color: #2B334C;
+        padding: 40px;
+
+        .ant-modal-header,
+        .ant-modal-body,
+        .ant-modal-footer {
+            background-color: #2B334C;
+        }
+    }
+
+    .modal-title {
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+        color: #FFFFFF;
+    }
+
+    .close-button-modal {
+        height: 32px;
+        width: 32px;
+        background: rgba(255, 255, 255, 0.15);
+        border: none;
+        color: #FFFFFF;
+
+    }
+
+    .space-add-account {
+        width: 100%;
+
+        .ant-form-item-label {
+            label {
+                font-family: 'Helvetica Neue';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                color: rgba(255, 255, 255, 0.4);
+            }
+        }
+
+        .input-create-modal {
+            height: 48px;
+            width: 100%;
+            background: #FFFFFF;
+
+            .ant-select-selector {
+                height: 48px;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .cancel-add-account {
+            font-family: 'Helvetica Neue';
+            width: 100%;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: #FFFFFF;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .submit-add-account {
+            font-family: 'Helvetica Neue';
+            width: 100%;
+            height: 48px;
+            background: #35DA7F;
+            border: none;
+            color: #000000;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+}

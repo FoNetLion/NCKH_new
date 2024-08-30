@@ -1,0 +1,91 @@
+.acc-detail-header_icon-wrapper{
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+    .acc-detail-header_icon{
+        font-size: 18px;
+    }
+}
+
+.acc-detail-wrapper{
+    padding: 0px 40px 33px;
+    width: 100%;
+}
+.acc-detail-header{
+    padding:20px 0;
+}
+.acc-detail-content{
+    padding: 20px 0 !important;
+}
+.acc-detail-menu{
+    background-color: #252C40;
+    padding: 24px;
+    .menuTab {
+        padding: 0;
+        .ant-menu{
+            border: none;
+            background: #252C40;
+        }
+        .ant-menu-item{
+            height: 46px;
+            background: #252C40;
+            border-radius: 8px;
+            width: 100%;
+            margin: 0;
+            margin-right: 0 !important;
+            .ant-menu-title-content{
+                font-family: 'Helvetica Neue';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.4);
+            }
+        }
+        .ant-menu-item-selected{
+            background: rgba(255, 255, 255, 0.1) !important;
+            .ant-menu-title-content{
+                color: white;
+            }
+            
+        }
+        
+    }
+}
+
+.acc-detail-tab{
+    width: 70%;
+}
+
+.acc-action{
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: start;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 0 0 10px;
+    height: 46px;
+    border-radius: 4px;
+    display: flex;
+    text-align: center;
+    svg{
+        height: 100%;
+    }
+    span{
+        line-height: 46px;
+        margin-left: 10px;
+    }
+    &:hover{
+        background: rgba(255, 255, 255, 0.1) !important;
+    }
+}
+.acc-ban{
+    color: #f25b60 !important;
+}
+.acc-unban{
+    color: rgb(67, 214, 133);}

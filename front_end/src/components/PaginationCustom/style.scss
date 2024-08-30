@@ -1,0 +1,20 @@
+.pagination-custom {
+    .ant-pagination-item {
+        height: 26px;
+        min-width: 28px;
+        a {
+            color: rgba(0, 0, 0, 0.7) !important;
+            line-height: 26px;
+        }
+    }
+
+    .ant-pagination-item-active {
+        background-color: #000000;
+        border: 1px solid #E0E0E0;
+        border-radius: 100%;
+
+        a {
+            color: #FFFFFF !important;
+        }
+    }
+}

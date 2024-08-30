@@ -1,0 +1,154 @@
+@import "variables";
+@import "color";
+// ------------------------------------ FONT --------------------------
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
+//------------------------------------- GENERAL -----------------------
+body {
+  width: 100%;
+  overflow-x: hidden;
+  padding: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 4px !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a1a1a1;
+  border-radius: 4px !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7c7b7b;
+}
+.container-wrapper{
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+input {
+  font-family: "Roboto" !important;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  width: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+.w-50 {
+width: 50% !important;
+}
+
+.h-100 {
+  height: 100%;
+}
+.p-0 {
+padding: 0;
+}
+.pr-12 {
+padding-right: 12px !important;
+}
+.pl-12 {
+padding-left: 12px !important;
+}
+.m-0 {
+margin: 0;
+}
+.no-border {
+border: none !important;
+}
+
+.w-auto {
+width: auto !important;
+}
+
+.m-24 {
+margin: 24 !important;
+}
+
+div[tabIndex="0"],
+
+form[tabIndex="0"] {
+  outline: none !important;
+}
+// -------------------------------------- PAGE ------------------------------
+
+// ---------------------------------------ANTD -----------------------------
+table {
+  thead {
+    tr {
+      th {
+        text-align: center !important;
+        //white-space: nowrap;
+      }
+    }
+  }
+}
+input:disabled {
+}
+.page-container {
+  padding: 8px;
+  width: 100%;
+}
+
+.card-container {
+  .ant-card-body {
+    padding: 4px 8px;
+  }
+}
+button.btn-middle {
+  height: 36px;
+  border-radius: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+button.btn-primary {
+  height: 36px;
+  border-radius: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  background-color: #2862af;
+  color: white;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.ant-input-disabled {
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+.ant-input-number-disabled {
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+
+.ant-select-disabled {
+  span {
+    color: rgba(0, 0, 0, 0.88) !important;
+  }
+}

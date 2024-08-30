@@ -1,0 +1,51 @@
+1, ở máy client 
+- file cấu hình : sudo gedit /etc/evebox/agent.yaml 
++ sửa :
+  server:
+  url: http://192.168.121.191:5636   # thay vào ip của evebox server
+- chạy để gửi log từ eve.json client lên sqlite của server : evebox agent -c /etc/evebox/agent.yaml
+=> để thuân tiện thì ở máy client đã chạy tất cả lệnh vào 1 file .sh, vào thư mục Documents/Monitor và chạy file .sh này
+~/Documents/Monitor$ ./monitor.sh 
+2, máy server
+- Chạy: 
++ sudo systemctl start evebox
++ sudo systemctl status evebox
++ sudo systemctl enable evebox
+- xem : http://localhost:5636  hoặc  http://(ip của máy server trên 1 card mạng nào đó, vd ơ đây là card ens33)192.168.121.89:5636
+- Sql lite:
++ đường dẫn đến thư muc lưu trữ:
+sudo su
+cd /var/lib/evebox/
++ file lưu trữ là : events.sqlite
++ sudo du -sh /var/lib/evebox/events.sqlite: kiểm tra dung lượng cụ thể của file
++ xem cơ sở dữ liệu:  cài đặt SQLite DB Browse
+Mở DB Browser for SQLite với Quyền root sau đơ mở file events.sqlite:
+sudo sqlitebrowser /var/lib/evebox/events.sqlite
+
++ Xóa file csdl: Để xóa file /var/lib/evebox/events.sqlite lúc ấy evebox server ko còn gì để hiện thị cả
+  Dừng dịch vụ EveBox: sudo systemctl stop evebox
+ Kiểm tra trạng thái: sudo systemctl status evebox
+ xóa : sudo rm /var/lib/evebox/events.sqlite
+ Khởi động lại dịch vụ EveBox: sudo systemctl start evebox
+
+====
+Thao tác với suricata ở máy client
+- file cấu hình : sudo gedit /etc/suricata/suricata.yaml
++ Sửa biến HOME_NET
++ Tùy chính file rule: 
+rule-files:
+#  - suricata.rules
+  - local.rules
++ rule tự viết: sudo gedit /var/lib/suricata/rules/local.rules
++ rule sẵn: sudo gedit /var/lib/suricata/rules/suricata.rules
+- kiêm tra file câu hình:  sudo suricata -T -c /etc/suricata/suricata.yaml -v
+- chạy suricata:  sudo suricata -c /etc/suricata/suricata.yaml -i ens33 
+- file log eve.json : sudo gedit /var/log/suricata/eve.json   
+- xóa file eve.json : sudo truncate -s 0 /var/log/suricata/eve.json
+sudo systemctl start suricata.service
+sudo systemctl status suricata.service
+sudo systemctl stop suricata.service
+sudo systemctl restart suricata.service
+
+- test tải file: 192.168.121.189/downloads/yourfile.txt  , bao gồm test mã hash và alert
+

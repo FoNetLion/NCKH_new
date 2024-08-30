@@ -1,0 +1,62 @@
+.table-accounts{
+    background: #252C40;
+    .ant-table-thead{
+        tr{
+            .ant-table-cell{
+                padding: 10px !important;
+                background-color: #252C40 !important;
+                color: rgba(255, 255, 255, 0.7);
+                border-start-start-radius: 0 !important;
+                border-start-end-radius: 0 !important;
+                border: none;
+                .ant-table-column-has-sorters{
+                    &:hover{
+                        background-color: #252C40;
+                    }
+                }
+            }
+            .ant-table-cell::before{
+                display: none;
+            }
+        }
+    }
+    .ant-table-tbody{
+        background-color: #252C40;
+        tr{
+            border-top: 0.5px solid rgba(255, 255, 255, 0.7) !important;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.7) !important;
+            margin: 0;
+        }
+        .ant-table-cell{
+            color: rgba(255, 255, 255, 0.7);
+            background-color: #252C40 !important;
+            font-family: 'Helvetica Neue';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            border: none ;
+        }
+        .ant-table-cell-row-hover{
+            background: rgba(255, 255, 255, 0.05) !important;
+        }
+        .ant-table-column-sort{
+            background: #252C40 !important;
+        }
+    }
+    .account-name{
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        // font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFF;
+    }
+}
+.table-pagination_buildIn{
+    display: none !important;
+}
+
+.pagination-wapper{
+    padding: 20px 0;
+}

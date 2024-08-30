@@ -1,0 +1,22 @@
+.status-tag{
+    border-radius: 60px;
+    border: none;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    width: 65px;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 7px;
+}
+.success-tag{
+    background: rgba(67, 214, 133, 0.1);
+    color: #35DA7F;
+}
+
+.error-tag{
+    background: rgba(242, 91, 96, 0.1);
+    color: #F25B60;
+}

@@ -1,0 +1,158 @@
+.login-form-container {
+    position: absolute;
+    top: 81px;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+
+    .login-form-wrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .login-form-container-inside {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 43px;
+
+            .wrapper-login {
+                height: 100%;
+                width: 386px;
+
+                .main-login-form {
+                    width: 100%;
+                    display: block;
+
+                    input.ant-input {
+                        width: 100%;
+                        height: 48px;
+                        box-sizing: border-box;
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        border-radius: 4px;
+                    }
+
+                    .icon-input-login {
+                        font-size: 24px;
+                        height: 24px;
+                    }
+
+                    .ant-checkbox-input {
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 2px;
+                    }
+
+                    .ant-checkbox-checked {
+                        color: #35DA7F;
+                    }
+
+                    .checkbox-login {
+                        display: flex;
+
+                        .checkbox-tittle {
+                            font-family: 'Helvetica Neue';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: rgba(255, 255, 255, 0.7);
+                            margin-left: 8px;
+                        }
+                    }
+
+                    .forget-text-login {
+                        font-family: 'Source Sans Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #35DA7F;
+                    }
+
+                    .submit-button {
+                        width: 100%;
+                        height: 48px;
+                        background: #35DA7F;
+                        border-radius: 4px;
+
+                        .submit-button-tittle {
+                            font-family: 'Helvetica Neue';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+
+            .login-icon-cam {
+                font-size: 49.78px;
+            }
+
+            .ant-space-item {
+                display: flex;
+                justify-content: center;
+            }
+
+            .tittle-login {
+                font-family: 'Helvetica Neue';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 24px;
+                color: #FFFFFF;
+            }
+
+            .subtittle {
+                font-family: 'Helvetica Neue';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        .account-already-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 53px;
+
+            .account-already-text {
+                font-family: 'Source Sans Pro';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(255, 255, 255, 0.7);
+                margin-right: 8px;
+            }
+
+            .register-text {
+                font-family: 'Source Sans Pro';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: #35DA7F;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .login-form-container {
+        .login-form-wrapper {
+            .login-form-container-inside {
+                .wrapper-login {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}

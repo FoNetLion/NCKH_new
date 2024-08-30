@@ -1,0 +1,120 @@
+@import '../../../../../../assets/styles/variables';
+
+.header-container{
+    background: #1a6de3;
+    padding: 15px 40px 15px 10px !important;
+    //border-left: 1px solid rgba(255, 255, 255, 0.07);
+    .search-Input{
+        // height: 40px;
+        background: #ffffff0d;
+        border: none;  
+        input{
+            color: #ffffff !important;  
+        }   
+        .ant-input{
+            background: none;   
+        }
+        .ant-input-prefix{
+            color: #ffffff;
+            margin-right: 15px;
+        }
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.25);
+        }
+        .merge-button{
+            height: 28px;
+            width: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            font-family: 'Helvetica Neue';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .infoUserHeader {
+        align-items: center;
+        .dividerInsideHeader{
+            border: 1px solid #e3e3e6;
+        }
+    }
+    .account-name, .country-name{
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+    .account-avatar{
+        background: none;
+        color: #FFFFFF;
+        border: none;
+        font-size: 16px;
+    }
+    .slide-logo-icon{
+        height: 40px;
+        font-size: 40px;
+    }
+    .slide-tittle {
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+}
+
+.mobileHidden{
+    display: flex;
+}
+
+.mobileVisible{
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .mobileHidden{
+        display: none;
+    }
+    
+    .mobileVisible{
+        display: flex;
+    }
+}
+
+.drawer-container{
+    // background: #252C40 !important;
+    .ant-drawer-header{
+        padding: 14px 0 !important;
+        background: #1a6de3;
+
+        .ant-drawer-title{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .ant-drawer-body{
+        padding: 0;
+    }
+    .account-name, .country-name{
+        font-family: 'Helvetica Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+    .account-avatar{
+        background: none;
+        color: #FFFFFF;
+        border: none;
+        font-size: 16px;
+    }
+}

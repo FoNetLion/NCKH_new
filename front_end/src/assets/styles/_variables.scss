@@ -1,0 +1,28 @@
+// @font-face {
+//   font-family: Averta;
+//   src: local("Averta"),
+//     url(../fonts/AvertaStdCY/AvertaStdCY-Light_1.otf) format("truetype");
+// }
+
+// @font-face {
+//   font-family: Averta bold;
+//   src: local("Averta"),
+//     url(../fonts/AvertaStdCY/AvertaStdCY-Semibold_1.otf) format("truetype");
+// }
+
+// @font-face {
+//   font-family: Averta semibold;
+//   src: local("Averta"),
+//     url(../fonts/AvertaStdCY/AvertaStdCY-Semibold_1.otf) format("truetype");
+//   font-weight: bold;
+// }
+
+$font-family-sans-serif: "Quicksand", sans-serif;
+$primary-color: #053f81 !default;
+$text-color: #555 !default;
+$link-hover-color: #ff5161 !default;
+$breakpoint-xs: 480px !default;
+$breakpoint-sm: 576px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 992px !default;
+$breakpoint-xl: 1200px !default;
