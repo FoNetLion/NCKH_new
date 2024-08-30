@@ -5,16 +5,17 @@ import {
 //import "./style.scss";
 import TextArea from "antd/es/input/TextArea";
 import ButtonCustom from "../../components/ButtonCustom";
+import { useParams } from 'react-router-dom';
 
-// import { RuleApi } from "../../apis/rule";
+import { RuleApi } from "../../apis/rule";
 // import { UpdateRuleType } from "../../constants/types/rules.type";
-
 
 const RuleDetails: FC = () => {
   const [isEdit, setIsEdit] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [dataRule, setDataRule] = useState("");
   const [dataRuleChange, setDataRuleChange] = useState("");
+  const { filename } = useParams();
   // hàm khi shift + / thì command
   const handleCommandKey = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === '/' && e.ctrlKey) {
@@ -39,16 +40,19 @@ const RuleDetails: FC = () => {
   }
 
   const fetchDataRule = async () => {
-    // setIsLoading(true);
-    // try {
-    //   const res = await RuleApi.getByServernamePort({ ServerName: agentData.ServerName, Port: agentData.Port });
-    //   if (res.status === 200) {
-    //     setDataRule(res.data);
-    //     setIsLoading(false);
-    //   } else {
-    //     message.error("Get rule error");
-    //   }
-    // } catch (error) {
+    setIsLoading(true);
+   // try {
+      const res = await RuleApi.GetContentRule({filename});
+    //  console.log(res.data); 
+      setDataRule(res.data);
+      setIsLoading(false);
+      // if (res.status === 200) {
+      //   setDataRule(res.data);
+      //   setIsLoading(false);
+      // } else {
+      //   message.error("Get rule error");
+      // }
+  //  } catch (error) {
     //   message.error("Get rule error");
     //   setIsLoading(false);
     // }
@@ -65,25 +69,22 @@ const RuleDetails: FC = () => {
     setDataRuleChange(e.target.value);
   }
   const handleUpdate = async () => {
-    // const data: UpdateRuleType = {
-    //   ServerName: agentData.ServerName,
-    //   Port: agentData.Port,
-    //   rules: dataRuleChange
-    // }
+   
+    const dataToSend = { 
+      name: filename, 
+      content_rule: dataRuleChange
+  };
     setIsLoading(true);
-    try {
-//       const res = await RuleApi.updateRuleFileEachAgent(data);
-//       if (res.status === 200) {
-//         message.success(res.data.message);
-// setIsLoading(false);
-//         fetchDataRule();
-//       } else {
-//         message.error("Update rule fail");
-//       }
-    } catch (error) {
-      message.error("Update rule fail");
-      setIsLoading(false);
-    }
+    const res = await RuleApi.updateRule(dataToSend);
+    message.success('Cập nhật thành công');
+    setIsLoading(false);
+    fetchDataRule();
+    /*================ test tên file lấy ra + nội dung cần update  
+    console.log(dataRuleChange); 
+    console.log(filename); 
+      */
+  
+
   }
   const handleCancel = () => {
     setIsEdit(false);

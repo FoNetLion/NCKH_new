@@ -363,14 +363,14 @@ async def get_rule_file(filename: str = Query(...)):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.put("/rule-client/update/",)
-async def update_rule_file(filename: str = Query(...), content: str = Query(...)):
+async def update_rule_file(file_input: FileNameInput):
     try:
         client_ip = "192.168.189.133"
         username = "william"
         password = "k"  # Thay thế "k" bằng mật khẩu thực tế
-        remote_file_path = f"/var/lib/suricata/rules/{filename}"
-        rules = update_file(filename, collection_file)
-        process_rules_file_on_client(client_ip, username, password, remote_file_path, content)
+        remote_file_path = f"/var/lib/suricata/rules/{file_input.file_name}"
+        rules = update_file(file_input.file_name, collection_file)
+        process_rules_file_on_client(client_ip, username, password, remote_file_path, file_input.content)
        
         return rules
         # Trả về kết quả dưới dạng JSON

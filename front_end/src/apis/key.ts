@@ -1,5 +1,5 @@
 import {request} from './base'
-import { CommonGetAllParams, DeleteKeyParams, CommonSearchAllParams } from "../constants/types/common.type";
+import { CommonGetAllParams, FileNameParams, CommonSearchAllParams } from "../constants/types/common.type";
 import { Key } from '../constants/types/key.type';
 
 export const keyApi = {
@@ -21,7 +21,7 @@ export const keyApi = {
       data,
     })
   },
-  delete: (params: DeleteKeyParams)=>{
+  delete: (params: FileNameParams)=>{
     return request("/key",{
       method: "DELETE",
       params,

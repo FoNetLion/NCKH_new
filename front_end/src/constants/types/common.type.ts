@@ -28,6 +28,13 @@ export type CommonSearchAllParams = {
   keyword?: string;
   status?: number;
 };
+export type UpdateRuleParams = {
+  page?: number;
+  limit?: number;
+  keyword?: string;
+  status?: number;
+};
+
 export type GetDetailCustomerParams = {
   id?: string;
 };
@@ -35,7 +42,7 @@ export type UpdateCustomerStatus = {
   id: string;
   status?: number;
 };
-export type DeleteKeyParams = {
+export type FileNameParams = {
   filename?: string;
 };
 export type Account = {
