@@ -10,6 +10,7 @@ import agentManagementDetailsRoute from '../pages/AgentManagementDetails/route';
 import ruleManagementRoute from '../pages/RuleManagement/route'
 import ruleDetailsRoute from '../pages/RuleDetail/route'
 import addruleRoute from '../pages/AddFileRule/route'
+import monitorflowRoute from '../pages/MonitorFlow/route'
 // tên route ở đây đặt là gì cũng được
 export default [
   settingRoute,
@@ -23,5 +24,6 @@ export default [
   alertRoute,
   ruleManagementRoute,
   ruleDetailsRoute,
-  addruleRoute 
+  addruleRoute ,
+  monitorflowRoute
 ];

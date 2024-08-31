@@ -12,7 +12,8 @@ import {
   FLOW_MANAGEMENT,
   AGENT_MANAGEMENT,
   ALERT,
-  RULE_MANAGEMENT
+  RULE_MANAGEMENT,
+  MONITOR_FLOW
 } from "../../../../../../routes/route.constant";
 import { Link } from "react-router-dom";
 
@@ -50,7 +51,8 @@ const items: MenuItem[] = [
     getItem(<Link to={LOG_PACKAGE}>Log</Link>, '5-1', <AppstoreFilled />),
     getItem(<Link to={RULE_MANAGEMENT}>Quản Lý Rule</Link>, '5-2', <AppstoreFilled />)
     // getItem(<Link to={`${RULE}/2`}>MannagerRule</Link>, '5-2', <AppstoreFilled />),
-  ])
+  ]),
+  getItem(<Link to={MONITOR_FLOW}>Monitor Flow</Link>, '6', <AppstoreFilled />)
 ];
 export const SideBar: React.FC = () => {
   return (

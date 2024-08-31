@@ -1,0 +1,43 @@
+// .categories-administratives-table-container {
+//   .inline-text {
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//   }
+// }
+
+// .page-container {
+//   .ant-card-body .total-Page-SystemParam {
+//     position: absolute;
+//     bottom: 12px;
+//     left: 100px;
+//   }
+// }
+
+/* style.scss */
+/* Căn giữa phần tử chứa */
+.container {
+  display: grid;
+  place-items: center;   /* Căn giữa theo cả chiều ngang và chiều dọc */
+  height: 450px;         /* Chiều cao toàn bộ viewport */
+  padding: 10px;         /* Tùy chọn, để có khoảng cách giữa các phần tử và biên */
+  padding-top: 30px; 
+}
+
+/* Cấu hình cho phần tử Card */
+.card-container{
+  width: 98%;
+  max-width: 100%;          /* Đảm bảo rằng chiều rộng không vượt quá phần tử chứa */
+  box-sizing: border-box;   /* Đảm bảo padding và border không làm cho phần tử vượt quá chiều rộng của nó */
+  height: 450px;            /* Chiều cao cụ thể cho phần tử Card */
+  /* Hoặc sử dụng min-height nếu muốn đảm bảo chiều cao tối thiểu */
+  /* min-height: 500px; */
+  margin-top: 10px;
+}
+// .highcharts-container {
+//   overflow-x: auto; /* Kích hoạt cuộn ngang nếu cần */
+// }
+
+// .highcharts-scrollbar {
+//   height: 5px; /* Chiều cao của thanh cuộn */
+// }

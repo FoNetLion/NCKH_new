@@ -18,3 +18,5 @@ export const ALERT = "/alert";
 export const RULE_MANAGEMENT = "/rule_management";
 export const RULE_DETAILS = "/rule-details/:filename";
 export const ADD_FILE = "/add-file";
+export const MONITOR_FLOW = "/monitor-flow";
+
